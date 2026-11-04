@@ -110,7 +110,7 @@ jobs:
 
       - name: Initialize CodeQL
         if: steps.scope.outputs.code == 'true'
-        uses: github/codeql-action/init@fddeee1a7ece751b577e409a89057319e3172939 # v4
+        uses: github/codeql-action/init@064910ba27454a2e49b06301d31c8bdb6260942f # v4
         with:
           languages: javascript-typescript
           queries: security-extended
@@ -121,7 +121,7 @@ jobs:
 
       - name: Analyze with CodeQL
         if: steps.scope.outputs.code == 'true'
-        uses: github/codeql-action/analyze@fddeee1a7ece751b577e409a89057319e3172939 # v4
+        uses: github/codeql-action/analyze@064910ba27454a2e49b06301d31c8bdb6260942f # v4
         with:
           category: /language:javascript-typescript
 
