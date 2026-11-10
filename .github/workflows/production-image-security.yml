@@ -56,6 +56,10 @@ on:
   workflow_call:
   workflow_dispatch:
     inputs:
+
+concurrency:
+  group: production-image-security-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 permissions:
   contents: read
   packages: write
